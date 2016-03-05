@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>日历控件</title>
+	<script type="text/javascript" src="vendor/JSLite.min.js"></script>
+	<script type="text/javascript" src="src/JSLite.Calendar.js"></script>
+	<link rel="stylesheet" type="text/css" href="calendar.css">
+</head>
+<body>
+
+<style type="text/css">
+	input{
+		line-height: 23px;
+		width: 230px;
+		display: block;
+	}
+</style>
+
+<div>
+	<div id="JSLiteCalenbar4"><input type="text"></div>
+</div>
+
+<script type="text/javascript">
+var obj4 = document.getElementById("JSLiteCalenbar4")
+var aaa=new $.calendar(obj4,function(date){
+	console.log(date);
+	//返回更改的时间值date=2014-10-11
+
+	$('#JSLiteCalenbar4 input').val()
+	this.calBoxs.prev().val(date)
+})
+.hide()
+.time("yyyy/MM月dd日 hh:mm:ss",'default')
+</script>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+<div id="JSLiteCalenbar2"><div class="">点击显示</div></div>
+<script type="text/javascript">
+	var obj3 = document.getElementById("JSLiteCalenbar2")
+	new $.calendar(obj3,{
+		"now":"2014-09-15"
+	},function(date){
+		//返回更改的时间值date=2014-10-11
+		console.log(date)
+	}).hide();
+</script>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+<div id="JSLiteCalenbar"><div class="titss">这个是一个特殊的日历</div></div>
+<script type="text/javascript">
+var obj = document.getElementById("JSLiteCalenbar");
+var cal = new $.calendar(obj,function(date){
+	// return {
+	// 	"now":"2014-09-15",//服务器当前时间
+	// 	"change":true,//是否更改当前时间以前的内容
+	// 	"interfaceNum":3,//显示当前以后多少个日历
+	// 	"workdate":[
+	// 		{
+	// 			"date":"2013-12",
+	// 			"day":["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "20"]
+	// 		},{
+	// 			"date":"2014-09",
+	// 			"day":["10", "2", "3", "4", "5", "6", "20"]
+	// 		},{
+	// 			"date":"2014-05",
+	// 			"day":["10", "2", "3", "4", "5", "6", "20"]
+	// 		}
+	// 	]
+	// }
+	// console.log(date)
+
+	// var self=this;
+	// $.ajax('GET', 'http://localhost/url.php',null,
+	// function(data) {
+	// 	var json=JSON.parse(data)
+	//     // console.log('ok', data)
+	//     // console.log(json)
+
+	//     // setTimeout(function(){
+	//     // 	self.setDate(json)
+	//     // },5000)
+
+
+	// },
+	// function(status, statusText) {
+	//     console.log('error', status, statusText)
+	// })
+
+
+
+	// this.setDate({
+	// 	"now":"2014-09-15",//服务器当前时间
+	// 	"change":true,//是否更改当前时间以前的内容
+	// 	"interfaceNum":3,//显示当前以后多少个日历
+	// 	"workdate":[
+	// 		{
+	// 			"date":"2013-12",
+	// 			"day":["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "20"]
+	// 		},{
+	// 			"date":"2014-09",
+	// 			"day":["10", "2", "3", "4", "5", "6", "20"]
+	// 		},{
+	// 			"date":"2014-05",
+	// 			"day":["10", "2", "3", "4", "5", "6", "20"]
+	// 		},{
+	// 			"date":"2014-10",
+	// 			"day":["12", "2", "3", "4", "5", "6", "20"]
+	// 		}
+	// 	]
+	// })
+
+
+},function(date){
+	//返回更改的时间值date=["2014-10-10,0","2014-10-11,0"]
+	console.log(date)
+}).setDate({
+	"now":"2014/09/15",//服务器当前时间
+	"change":true,//是否更改当前时间以前的内容
+	"interfaceNum":2,//显示当前以后多少个日历
+	"workdate":[
+		{
+			"date":"2014/10",
+			"day":["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "20"]
+		},{
+			"date":"2014/09",
+			"day":["10", "2", "3", "4", "5", "6", "20"]
+		}
+	]
+}).hidePrevBtn();
+
+
+
+
+
+// var obj5 = document.getElementById("JSLiteCalenbar5")
+// var cal = new $.calendar(obj5,function(date){
+// 	this.setDate({
+// 		"now":"2014-09-15",//服务器当前时间
+// 		"change":true,//是否更改当前时间以前的内容
+// 		"interfaceNum":3,//显示当前以后多少个日历
+// 		"workdate":[
+// 			{
+// 				"date":"2013-12",
+// 				"day":["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "20"]
+// 			},{
+// 				"date":"2014-09",
+// 				"day":["10", "2", "3", "4", "5", "6", "20"]
+// 			},{
+// 				"date":"2014-05",
+// 				"day":["10", "2", "3", "4", "5", "6", "20"]
+// 			},{
+// 				"date":"2014-10",
+// 				"day":["12", "2", "3", "4", "5", "6", "20"]
+// 			}
+// 		]
+// 	})
+// },function(date){
+// 	//返回更改的时间值date=["2014-10-10,0","2014-10-11,0"]
+// 	console.log(date)
+// }).hidePrevBtn();
+
+
+
+// var cal = new $.calendar(obj,function(){
+// 	return {
+// 		"now":"2013-12-10",//服务器当前时间
+// 		"change":true,//是否更改当前时间以前的内容
+// 		"interfaceNum":1,//显示当前以后多少个日历
+// 		"workdate":[
+// 			{
+// 				"date":"2013-12",
+// 				"day":["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "20"]
+// 			},{
+// 				"date":"2014-01",
+// 				"day":["10", "2", "3", "4", "5", "6", "20"]
+// 			},{
+// 				"date":"2014-05",
+// 				"day":["10", "2", "3", "4", "5", "6", "20"]
+// 			}
+// 		]
+// 	}
+// })
+
+
+
+
+// var cal2 = new $.calendar($("#JSLiteCalenbar2")[0],function(date){
+// 	//返回更改的时间值date=2014-10-11
+// 	console.log(date)
+// }).hide()
+
+
+
+
+
+// var obj4 = document.getElementById("JSLiteCalenbar")
+// new $.calendar(obj4,function(date){
+// 	//返回更改的时间值date=2014-10-11
+// 	console.log(date)
+// 	console.log("obj4")
+// }).hide()
+
+
+</script> 
+<br/><br/><br/><br/><br/>
+
+</body>
+</html>

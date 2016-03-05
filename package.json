@@ -1,0 +1,22 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "日历控件",
+  "main": "JSLite.Calendar.js",
+  "scripts": {
+    "watch-css": "stylus -w calendar.styl -o calendar.css -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JSLite/calendar"
+  },
+  "keywords": [
+    "JSLite",
+    "calendar"
+  ],
+  "author": "kenny wang <398188662@qq.com> (http://JSLite.io)",
+  "license": "MIT",
+  "dependencies": {
+    "stylus": "^0.54.0"
+  }
+}
