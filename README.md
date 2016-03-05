@@ -2,6 +2,9 @@
 
 > 引用JSLit.js 下载 [JSLite.io](http://JSlite.io)，兼容 `JSLite` 和 `jQuery`
 
+![日历控件](https://raw.githubusercontent.com/JSLite/calendar/master/calendar.gif "日历控件")  
+![日历控件](https://raw.githubusercontent.com/JSLite/calendar/master/calendar2.gif "日历控件")  
+
 ## 安装方法
 
 页面引用 `JSLite` 或者`jQuery`  
