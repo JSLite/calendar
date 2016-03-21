@@ -1,6 +1,6 @@
 # 日历控件
 
-[![](http://jaywcjlove.github.io/sb/jslite.svg)](https://github.com/JSLite/JSLite) [![](http://jaywcjlove.github.io/sb/segmentfault.svg)](https://segmentfault.com/t/jslite)
+[![](http://jaywcjlove.github.io/sb/plugin/jslite.svg)](https://github.com/JSLite/JSLite) [![](http://jaywcjlove.github.io/sb/i/segmentfault.svg)](https://segmentfault.com/t/jslite)
 
 > 引用JSLit.js 下载 [JSLite.io](http://JSlite.io)，兼容 `JSLite` 和 `jQuery`
 
